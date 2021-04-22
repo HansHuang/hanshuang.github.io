@@ -188,7 +188,7 @@ Module['FS_createPath']("/misc", "fonts", true, true);
     }
   
    }
-   loadPackage({"files": [{"filename": "/misc/fonts/SourceCodePro-Regular.ttf", "start": 0, "end": 138680, "audio": 0}], "remote_package_size": 138680, "package_uuid": "b8b0257c-de9a-43a1-a0b0-c1b584bc78cd"});
+   loadPackage({"files": [{"filename": "/misc/fonts/SourceCodePro-Regular.ttf", "start": 0, "end": 138680, "audio": 0}], "remote_package_size": 138680, "package_uuid": "d27d7225-52a1-4dbe-8ade-76c78b829b3c"});
   
   })();
   
@@ -4449,6 +4449,10 @@ function resizeCanvas(){ Module.resizeCanvas(); }
   }
   }
 
+  function _abort() {
+      abort();
+    }
+
   function _emscripten_memcpy_big(dest, src, num) {
       HEAPU8.copyWithin(dest, src, src + num);
     }
@@ -7379,6 +7383,7 @@ var asmLibraryArg = {
   "__sys_fcntl64": ___sys_fcntl64,
   "__sys_ioctl": ___sys_ioctl,
   "__sys_open": ___sys_open,
+  "abort": _abort,
   "emscripten_memcpy_big": _emscripten_memcpy_big,
   "emscripten_resize_heap": _emscripten_resize_heap,
   "emscripten_set_main_loop": _emscripten_set_main_loop,
@@ -7476,16 +7481,16 @@ var asm = createWasm();
 var ___wasm_call_ctors = Module["___wasm_call_ctors"] = createExportWrapper("__wasm_call_ctors");
 
 /** @type {function(...*):?} */
-var _main = Module["_main"] = createExportWrapper("main");
-
-/** @type {function(...*):?} */
-var _fflush = Module["_fflush"] = createExportWrapper("fflush");
+var _free = Module["_free"] = createExportWrapper("free");
 
 /** @type {function(...*):?} */
 var _malloc = Module["_malloc"] = createExportWrapper("malloc");
 
 /** @type {function(...*):?} */
-var _free = Module["_free"] = createExportWrapper("free");
+var _main = Module["_main"] = createExportWrapper("main");
+
+/** @type {function(...*):?} */
+var _fflush = Module["_fflush"] = createExportWrapper("fflush");
 
 /** @type {function(...*):?} */
 var ___errno_location = Module["___errno_location"] = createExportWrapper("__errno_location");
