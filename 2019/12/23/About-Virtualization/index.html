@@ -1,0 +1,48 @@
+<!DOCTYPE html><html lang="zh-cn"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"><meta name="format-detection" content="telephone=no"><meta name="format-detection" content="email=no"><meta name="description" content="Hans Blog"><meta name="keywords" content="Hans Blog"><title>About Virtualization - Hans Huang</title><link rel="stylesheet" href="/style/main.css"><link rel="icon" href="/favicon.ico"><meta name="generator" content="Hexo 5.4.0"></head><body><input id="navi" type="checkbox"><ul class="main-navication"><li><a href="/"><span>Home</span></a></li><li><a href="/archives"><span>Achive</span></a></li><li><a target="_blank" rel="noopener" href="https://github.com/HansHuang"><span>Github</span></a></li></ul><div class="wrapper" id="wrap"><div class="post-header"><label class="navi-button light" for="navi">MENU</label><img class="background" src="/images/post_background.jpg"><div class="post-title"><h1 class="title">About Virtualization</h1><ul class="meta"><li><i class="icon icon-author"></i>Hans Huang</li><li><i class="icon icon-clock"></i>5 Minutes</li><li><i class="icon icon-calendar"></i>December 23, 2019</li></ul></div></div><div class="article-content" style="max-width:1200px"><p>For we software developer, the computer system can be category as below 4 layer:</p>
+<ol>
+<li>Application Layer</li>
+<li>Library Layer</li>
+<li>OS Layer</li>
+<li>Hardware Layer</li>
+</ol>
+<p>Every layer consumes API from bottom layer, and also provides API to offer services/functions to upper layer.</p>
+<p>Between each layer, abstraction layer can be created, that is called: Virtualization. From virtualization below benefits is provided:</p>
+<ol>
+<li>Unify &amp; standardize the the APIs form different manufacturers</li>
+<li>Improve portability for programs</li>
+<li>Isolate the impact of processes from each other</li>
+<li>Resource reuse/measure &amp; control</li>
+</ol>
+<h2 id="The-virtualization-between-App-amp-Lib-layer"><a href="#The-virtualization-between-App-amp-Lib-layer" class="headerlink" title="The virtualization between App &amp; Lib layer"></a>The virtualization between App &amp; Lib layer</h2><p>Samples:</p>
+<ul>
+<li>JVM</li>
+<li>CLR</li>
+<li>Web Browser</li>
+<li>…</li>
+</ul>
+<p>Many languages benefit from the virtual machine for the platform independent. As different platform provides different system level function libraries, VM is the one build abstraction layer upon on them.</p>
+<p>For developers only need to coding with APIs of VM, the VM will handle native interaction with different platform.</p>
+<p>VM usually will also provide additional services to speed up our application development. e.g.</p>
+<ul>
+<li>Memory Management</li>
+<li>Garbage Collection</li>
+<li>Exception handling</li>
+<li>Security, Thread &amp; Concurrency Management</li>
+<li>…</li>
+</ul>
+<h2 id="The-virtualization-between-Lib-amp-OS-layer"><a href="#The-virtualization-between-Lib-amp-OS-layer" class="headerlink" title="The virtualization between Lib &amp; OS layer"></a>The virtualization between Lib &amp; OS layer</h2><p>Samples could be popular “Container” engine:</p>
+<ul>
+<li>Docker</li>
+<li>CoreOS Rocket</li>
+<li>…</li>
+</ul>
+<p>THe container mocked the API of system layer</p>
+<h2 id="The-virtualization-between-OS-amp-Hardware-layer"><a href="#The-virtualization-between-OS-amp-Hardware-layer" class="headerlink" title="The virtualization between OS &amp; Hardware layer"></a>The virtualization between OS &amp; Hardware layer</h2><p>Samples:</p>
+<ul>
+<li>VMWare vSphere</li>
+<li>VMWare workstation / VirtualBox / Hyper-V</li>
+</ul>
+</div><div class="article-meta" style="max-width:1200px"></div><ul class="navication"><li class="home"><a href="/"><i class="icon icon-home"></i></a></li><li><a href="/2020/10/31/Eliminate-if-else-Statements-Hell/"><i class="icon icon-arror-left"></i></a></li><li><a href="/2019/10/31/The-Power-of-Estimation/"><i class="icon icon-arror-right"></i></a></li></ul><div class="page-footer"><div class="top"><ul class="social"><li><a href="https://github.com/HansHuang" title="Github" target="_blank"><i class="icon icon-github"></i></a></li><li><a href="mailto: HansHuangysATsinaCOM" title="Mail" target="_blank"><i class="icon icon-email"></i></a></li></ul></div><div class="bottom"><p class="copyright">© 2021 Hans Huang</p></div></div></div><script>var wrap = document.getElementById('wrap');
+window.onload = function () {
+  wrap.className += ' done';
+}</script></body></html>
