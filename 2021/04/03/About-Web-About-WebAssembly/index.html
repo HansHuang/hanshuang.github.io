@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="zh-cn"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"><meta name="format-detection" content="telephone=no"><meta name="format-detection" content="email=no"><meta name="description" content="Hans Blog"><meta name="keywords" content="Hans Blog"><title>About Web, About WebAssembly - Hans Huang</title><link rel="stylesheet" href="/style/main.css"><link rel="icon" href="/favicon.ico"><meta name="generator" content="Hexo 5.4.0"></head><body><input id="navi" type="checkbox"><ul class="main-navication"><li><a href="/"><span>Home</span></a></li><li><a href="/archives"><span>Achive</span></a></li><li><a target="_blank" rel="noopener" href="https://github.com/HansHuang"><span>Github</span></a></li></ul><div class="wrapper" id="wrap"><div class="post-header"><label class="navi-button light" for="navi">MENU</label><img class="background" src="/images/post_background.jpg"><div class="post-title"><h1 class="title">About Web, About WebAssembly</h1><ul class="meta"><li><i class="icon icon-author"></i>Hans Huang</li><li><i class="icon icon-clock"></i>37 Minutes</li><li><i class="icon icon-calendar"></i>April 3, 2021</li></ul></div></div><div class="article-content" style="max-width:1200px"><p>The giants behind javascript/web.</p>
+<!DOCTYPE html><html lang="zh-cn"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"><meta name="format-detection" content="telephone=no"><meta name="format-detection" content="email=no"><meta name="description" content="Hans Blog"><meta name="keywords" content="Hans Blog"><title>About Web, About WebAssembly - Hans Huang</title><link rel="stylesheet" href="/style/main.css"><link rel="icon" href="/favicon.ico"><meta name="generator" content="Hexo 5.4.0"></head><body><input id="navi" type="checkbox"><ul class="main-navication"><li><a href="/"><span>Home</span></a></li><li><a href="/archives"><span>Achive</span></a></li><li><a target="_blank" rel="noopener" href="https://github.com/HansHuang"><span>Github</span></a></li></ul><div class="wrapper" id="wrap"><div class="post-header"><label class="navi-button light" for="navi">MENU</label><img class="background" src="/images/post_background.jpg"><div class="post-title"><h1 class="title">About Web, About WebAssembly</h1><ul class="meta"><li><i class="icon icon-author"></i>Hans Huang</li><li><i class="icon icon-clock"></i>38 Minutes</li><li><i class="icon icon-calendar"></i>April 3, 2021</li></ul></div></div><div class="article-content" style="max-width:1200px"><p>The giants behind javascript/web.</p>
 <h2 id="Render-Engine"><a href="#Render-Engine" class="headerlink" title="Render Engine"></a>Render Engine</h2><ul>
 <li><strong>Webkit</strong>: Opened source by Apple, web render engine for Safari, IOS, Gnome<ul>
 <li><strong>Blink</strong>: Core of Chrome, forked branch from Webkit by Google</li>
@@ -97,19 +97,24 @@
 </ul>
 <h2 id="Cutting-Edge-Research"><a href="#Cutting-Edge-Research" class="headerlink" title="Cutting Edge Research"></a>Cutting Edge Research</h2><h3 id="WebAssembly"><a href="#WebAssembly" class="headerlink" title="WebAssembly"></a>WebAssembly</h3><ol>
 <li>It’s a new <strong>standard</strong> by W3C, supported by mainstream modern web browsers.</li>
-<li>It’s a <strong>compilation target</strong> from different languages:  C/C++, Go/Rust, C#/Java/Swift…</li>
+<li>It’s a VM and <strong>compilation target</strong> from different languages:  C/C++, Go/Rust, C#/Java/Swift…</li>
 <li>Compact binary format with <strong>near native speed</strong>.</li>
 <li>Shares same security policies in web browser sandbox.</li>
 <li>Goal is to handle high performance requirement, not to replace JS.</li>
 </ol>
 <p>Get Start with WebAssemble: <a target="_blank" rel="noopener" href="https://webassembly.org/getting-started/developers-guide/">https://webassembly.org/getting-started/developers-guide/</a></p>
-<h4 id="WebAssembly-Ecosystem"><a href="#WebAssembly-Ecosystem" class="headerlink" title="WebAssembly Ecosystem"></a>WebAssembly Ecosystem</h4><ul>
+<h4 id="WebAssembly-Examples"><a href="#WebAssembly-Examples" class="headerlink" title="WebAssembly Examples"></a>WebAssembly Examples</h4><ul>
 <li><a target="_blank" rel="noopener" href="https://blog.tensorflow.org/2020/03/introducing-webassembly-backend-for-tensorflow-js.html">TensorFlow.js</a> WASM backend to be 10-30x faster than the plain JS (CPU) backend across our models</li>
 <li>AutoCAD, GoogleEarth, Unity</li>
+<li><a target="_blank" rel="noopener" href="https://bellard.org/jslinux/">Windows 2000</a> in web browser</li>
+</ul>
+<h4 id="WebAssembly-Ecosystem"><a href="#WebAssembly-Ecosystem" class="headerlink" title="WebAssembly Ecosystem"></a>WebAssembly Ecosystem</h4><ul>
+<li><a target="_blank" rel="noopener" href="https://emscripten.org/">emscripten</a> Compiler to WebAssembly for C/C++, convert OpenGL to WebGL.</li>
 <li><a target="_blank" rel="noopener" href="https://doc.qt.io/qt-5/wasm.html">QT WebAssembly</a> Build Qt application to webpage<ul>
 <li>Examples: <a target="_blank" rel="noopener" href="https://www.qt.io/qt-examples-for-webassembly">https://www.qt.io/qt-examples-for-webassembly</a> </li>
 </ul>
 </li>
+<li><strong><a target="_blank" rel="noopener" href="https://github.com/golang/go/wiki/WebAssembly">Go</a></strong> Official support in Golang.</li>
 <li><strong><a target="_blank" rel="noopener" href="https://yew.rs/en">Yew</a></strong> Rust framework for creating multi-threaded front-end web apps with WebAssembly. <em>Not production ready yet.</em></li>
 <li><strong><a target="_blank" rel="noopener" href="https://devblogs.microsoft.com/aspnet/blazor-webassembly-3-2-0-now-available/">Blazor WebAssembly</a></strong> <br/> <em>Not yet included in .net Core LTS. <a target="_blank" rel="noopener" href="https://github.com/dotnet/aspnetcore/issues/23571">Discussion</a></em><ul>
 <li>Telerik</li>
