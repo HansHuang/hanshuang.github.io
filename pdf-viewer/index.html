@@ -32,7 +32,7 @@
       width: 100%;
       overflow: hidden;
       grid-template-rows: 50px 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 
     input[type="radio"] {
@@ -58,7 +58,7 @@
     .tab {
       grid-column-start: 1;
       grid-row-start: 2;
-      grid-column-end: span 3;
+      grid-column-end: span 4;
       display: flex;
       align-items: center;
     }
@@ -82,7 +82,7 @@
 </head>
 
 <body>
-  <h1 id="header">3 PDF Viewer</h1>
+  <h1 id="header">PDF Viewer</h1>
   <div id="main">
     <div class="layout">
       <input name="nav" type="radio" class="nav" id="tab1" checked="checked" />
@@ -91,9 +91,7 @@
           <p>By Object</p>
           <div style="height: 90%;">
             <object data="./sample-pdf.pdf" type="application/pdf" width="100%" height="100%">
-              <p>
-                Your browser does not support PDFs. [Download the PDF](sample-pdf.pdf).
-              </p>
+              <p> Your browser does not support PDF viewing. <a href="./sample-pdf.pdf">Download the PDF</a>. </p>
             </object>
           </div>
         </div>
@@ -105,9 +103,9 @@
       <input name="nav" type="radio" id="tab2" />
       <div class="tab">
         <div class="tab-contents">
-          <p>By iframe</p>
+          <p>By iframe - disabled toolbar</p>
           <div style="height: 90%;">
-            <iframe src="./sample-pdf.pdf" width="100%" height="100%" style="border: none"></iframe>
+            <iframe src="./sample-pdf.pdf#toolbar=0" width="100%" height="100%" style="border: none"></iframe>
           </div>
         </div>
       </div>
@@ -118,14 +116,31 @@
       <input name="nav" type="radio" id="tab3" />
       <div class="tab">
         <div class="tab-contents">
-          <p>By embed (suggested)</p>
+          <p>By embed - disabled nav panels</p>
           <div style="height: 90%;">
-            <embed src="./sample-pdf.pdf" type="application/pdf" width="100%" height="500px" />
+            <embed src="./sample-pdf.pdf#navpanes=0" type="application/pdf" width="100%" height="100%" />
           </div>
         </div>
       </div>
       <label class="nav" for="tab3">
-        POC 3
+        POC 4
+      </label>
+
+      <input name="nav" type="radio" id="tab4" />
+      <div class="tab">
+        <div class="tab-contents">
+          <p>Object+iframe - disable toolbar & nav panels</p>
+          <div style="height: 90%;">
+            <object data="./sample-pdf.pdf#toolbar=0&navpanes=0" type="application/pdf" width="100%" height="100%">
+              <iframe src="./sample-pdf.pdf#toolbar=0&navpanes=0" width="100%" height="100%" style="border: none;">
+                <p> Your browser does not support PDF viewing. <a href="./sample-pdf.pdf">Download the PDF</a>. </p>
+              </iframe>
+            </object>
+          </div>
+        </div>
+      </div>
+      <label class="nav" for="tab4">
+        POC 4
       </label>
 
 
